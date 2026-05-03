@@ -3,7 +3,8 @@ from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Application, CommandHandler, MessageHandler, CallbackContext, filters
 
 # استخدم التوكن الذي حصلت عليه من BotFather
-TOKEN = '8348019632:AAFvubImtfxOAdXWtKGWPw4i4i1d86kYIuE'
+import os
+TOKEN = os.getenv("TOKEN")
 
 # تابع البحث عن الفيلم
 async def handle_message(update: Update, context: CallbackContext):
